@@ -1,0 +1,51 @@
+<!--
+  Generated template for the LevelStartOverviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{test}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-title> Besucher</ion-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3 ion-item *ngFor="let visitor of visitors; let index = index;">
+            {{ visitor.animalType.name }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-title> Buden</ion-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <button ion-item *ngFor="let visitor of visitors; let index = index;" (click)="itemSelected(item)">
+            {{ visitor.animalType.name }}
+        </button>
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
